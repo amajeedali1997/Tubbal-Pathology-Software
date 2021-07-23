@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3730B2C7-14BC-4384-8073-D521267BBE6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Tubbal.My.MyApplication</StartupObject>
+    <RootNamespace>Tubbal</RootNamespace>
+    <AssemblyName>Tubbal</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Tubbal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Tubbal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tubal.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data_pinfo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data_pinfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_pinfo.vb">
+      <DependentUpon>data_pinfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addtest.Designer.vb">
+      <DependentUpon>frm_addtest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addtest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addtestgroup.Designer.vb">
+      <DependentUpon>frm_addtestgroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addtestgroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_adduser.Designer.vb">
+      <DependentUpon>frm_adduser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_adduser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_allreport.Designer.vb">
+      <DependentUpon>frm_allreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_allreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_commission.Designer.vb">
+      <DependentUpon>frm_commission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_commission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_company.Designer.vb">
+      <DependentUpon>frm_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_company.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CrystalResult.Designer.vb">
+      <DependentUpon>frm_CrystalResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CrystalResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_dashboard.Designer.vb">
+      <DependentUpon>frm_dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_forgetpass.Designer.vb">
+      <DependentUpon>frm_forgetpass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_forgetpass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main.Designer.vb">
+      <DependentUpon>frm_main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addDoctor.Designer.vb">
+      <DependentUpon>frm_addDoctor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addDoctor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addpatient.Designer.vb">
+      <DependentUpon>frm_addpatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addpatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pendreport.Designer.vb">
+      <DependentUpon>frm_pendreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pendreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_report.Designer.vb">
+      <DependentUpon>frm_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_testreport.Designer.vb">
+      <DependentUpon>frm_testreport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_testreport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdl_con.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPT2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_dummy.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_dummy.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt_pinfo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_pinfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="test.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm_addtest.resx">
+      <DependentUpon>frm_addtest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_addtestgroup.resx">
+      <DependentUpon>frm_addtestgroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_adduser.resx">
+      <DependentUpon>frm_adduser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_allreport.resx">
+      <DependentUpon>frm_allreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_commission.resx">
+      <DependentUpon>frm_commission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_company.resx">
+      <DependentUpon>frm_company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CrystalResult.resx">
+      <DependentUpon>frm_CrystalResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_dashboard.resx">
+      <DependentUpon>frm_dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_forgetpass.resx">
+      <DependentUpon>frm_forgetpass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_main.resx">
+      <DependentUpon>frm_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_addDoctor.resx">
+      <DependentUpon>frm_addDoctor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_addpatient.resx">
+      <DependentUpon>frm_addpatient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pendreport.resx">
+      <DependentUpon>frm_pendreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_report.resx">
+      <DependentUpon>frm_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_testreport.resx">
+      <DependentUpon>frm_testreport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPT2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_dummy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_dummy.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_pinfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_pinfo.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data_pinfo.xsc">
+      <DependentUpon>data_pinfo.xsd</DependentUpon>
+    </None>
+    <None Include="data_pinfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>data_pinfo.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="data_pinfo.xss">
+      <DependentUpon>data_pinfo.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="test.xsc">
+      <DependentUpon>test.xsd</DependentUpon>
+    </None>
+    <None Include="test.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>test.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="test.xss">
+      <DependentUpon>test.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company1.png" />
+    <None Include="Resources\add-user-3-24.png" />
+    <None Include="Resources\login_sidebar.jpg" />
+    <Content Include="tubal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CrystalAnalysisCommLayerLib">
+      <Guid>{3CF3749A-607E-44ED-9D8F-9615756180B0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCommonObjectModelLib">
+      <Guid>{E9705A7B-04D3-4976-AA5E-03FA4C512B80}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsControllersLib">
+      <Guid>{0852E138-AA97-4981-B770-0668330D3632}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsDataDefModelLib">
+      <Guid>{291AE024-7ACA-4AF6-800E-F3231271C602}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsReportDefModelLib">
+      <Guid>{F6B46FE0-271D-4DA7-A891-A3513694F2F7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
